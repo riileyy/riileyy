@@ -1,0 +1,12 @@
+
+  return {"title": vname, "description": vacation_info };
+}
+/**
+ * 사용날짜 리스트 조회
+ */
+function _get_myvlist(email){
+  // GET Vacation Information by email
+  var vacation_sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(SHEET_LIST); // 휴가 정보 시트
+
+  var rangeVacation = vacation_sheet.getRange('B:E');
+  var vvalues = rangeVacation.getValues();
